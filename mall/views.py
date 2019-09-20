@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 
 # Create your views here.
+
+
+def product_list(request, template_name='product_list.html'):
+    '''商品列表'''
+    return render_to_response(template_name)
+
+def product_detail(request, pk, template_name='product_detail.html'):
+    '''商品详情'''
+    return render_to_response(template_name)
